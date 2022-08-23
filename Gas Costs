@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class GasCosts {
+   
+   public static double drivingCost(double drivenMiles, double milesPerGallon, double dollarsPerGallon) { //* creates my method
+      double dollarCost = 0; //* sets dollar cost 
+      dollarCost = (dollarsPerGallon * drivenMiles) / milesPerGallon; //*finds dollarCost 
+      return dollarCost;  //returns my dollar cost 
+   }
+    public static void main(String[] args) { //*Create main
+       Scanner input = new Scanner (System.in); //*creates a new Scanner to accept user input 
+       double mileGallon = input.nextDouble(); //*uses Scanner to accept miles 
+       double dollarGallon = input.nextDouble(); //*uses Scanner to accept gallon price 
+       
+      System.out.printf("%.2f ", drivingCost(10, mileGallon, dollarGallon)); //*calls my method for 10 miles driven
+      System.out.printf("%.2f ",  drivingCost(50, mileGallon, dollarGallon)); //*calls my method for 50 miles driven
+      System.out.printf("%.2f", drivingCost(500, mileGallon, dollarGallon)); //*calls my method for 500 miles driven
+      System.out.println();//* prints costs with a new line
+        
+	}
+}
+
+//This is a simple gas costs calculator. It takes in two user inputs, one for the mpg that the car gets and one for the cost of gas. The calculator will then return
+//the cost to drive 10, 50, and 500 miles with the resepective inputs. With rising gas prices it is always good to know how much you are going to spend before you 
+//begin your trip. This little project proved useful for when I know I am going to drive a longer distance and I want to estimate my gas costs. 
